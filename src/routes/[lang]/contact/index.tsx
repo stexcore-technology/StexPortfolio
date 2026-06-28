@@ -9,6 +9,7 @@ import styles from "./index.css?inline";
 import LangProvider from "~/providers/lang.provider";
 import useLang from "~/hooks/useLang";
 import LangButton from "~/components/lang-button/lang-button";
+import EcosystemMenu from "~/components/ecosystem-menu/ecosystem-menu";
 import Box from "~/components/box/box";
 import langService from "~/services/lang.service";
 import type { ILangType } from "~/types/lang";
@@ -34,6 +35,7 @@ const PageComponent = component$(() => {
                   {lang.value["navbar:home"]?.navbar.contact.label}
                 </NavItem>
                 <Box px={10}></Box>
+                <EcosystemMenu></EcosystemMenu>
                 <LangButton></LangButton>
             </Navbar>
             <MainContent>

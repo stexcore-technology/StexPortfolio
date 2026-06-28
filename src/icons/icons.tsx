@@ -63,3 +63,9 @@ export const NpmIcon = component$<IIconProps>((props) => (
         <svg xmlns="http://www.w3.org/2000/svg" class={className} width={size} height={size} viewBox="0 0 24 24"><path fill="currentColor" d="M2 2v20h20V2zm18 18h-3V7h-4v13H4V4h16z"/></svg>
     ))
 ));
+
+export const GridIcon = component$<IIconProps>((props) => (
+    Icon(props, (size, className) => (
+        <svg xmlns="http://www.w3.org/2000/svg" class={className} width={size} height={size} viewBox="0 0 24 24"><g fill="currentColor"><circle cx="5" cy="5" r="1.9"/><circle cx="12" cy="5" r="1.9"/><circle cx="19" cy="5" r="1.9"/><circle cx="5" cy="12" r="1.9"/><circle cx="12" cy="12" r="1.9"/><circle cx="19" cy="12" r="1.9"/><circle cx="5" cy="19" r="1.9"/><circle cx="12" cy="19" r="1.9"/><circle cx="19" cy="19" r="1.9"/></g></svg>
+    ))
+));

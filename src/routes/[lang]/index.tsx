@@ -6,6 +6,7 @@ import styles from "./index.module.css";
 import useLang from "~/hooks/useLang";
 import LangProvider from "~/providers/lang.provider";
 import LangButton from "~/components/lang-button/lang-button";
+import EcosystemMenu from "~/components/ecosystem-menu/ecosystem-menu";
 import langService from "~/services/lang.service";
 import type { ILangType } from "~/types/lang";
 
@@ -16,6 +17,7 @@ const PageComponent = component$(() => {
   return (
     <main class={styles["home"]}>
       <ul class={[styles["lang-content"], "smooth"]}>
+        <EcosystemMenu></EcosystemMenu>
         <LangButton></LangButton>
       </ul>
       <GalaticSpace class="smooth">

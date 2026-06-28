@@ -11,6 +11,7 @@ import { useNavigate } from "@builder.io/qwik-city";
 import { formatViews } from "~/utils/text.util";
 import Box from "../box/box";
 import LangButton from "../lang-button/lang-button";
+import EcosystemMenu from "../ecosystem-menu/ecosystem-menu";
 import LangProvider from "~/providers/lang.provider";
 import { WHATSAPP_URL } from "~/config/contact";
 
@@ -61,6 +62,7 @@ export default component$<IProjectProps>((props) => {
                     <WhatsappIcon></WhatsappIcon>
                 </NavItem>
                 <Box px={10}></Box>
+                <EcosystemMenu></EcosystemMenu>
                 <LangButton></LangButton>
             </Navbar>
             <MainContent>
