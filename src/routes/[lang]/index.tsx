@@ -34,6 +34,13 @@ const PageComponent = component$(() => {
               </li>
             </ul>
           </nav>
+          <img
+            class={[styles["logo"], "smooth"]}
+            src="/logo.png"
+            alt="Stexcore"
+            width={110}
+            height={110}
+          />
           <Present label={lang.value["home"]?.header || ""}></Present>
           <p class={[styles["typegraphy"], "smooth"]}>
             {lang.value["home"]?.phrase}
