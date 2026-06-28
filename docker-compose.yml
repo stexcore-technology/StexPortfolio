@@ -5,5 +5,19 @@ services:
       dockerfile: Dockerfile
     image: portfolio:1.0.0-beta.2
     container_name: portfolio
-    ports:
-      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+    expose:
+      - "3000"
+    volumes:
+      - portfolio-data:/app/.data
+    networks:
+      - dokploy-network
+
+volumes:
+  portfolio-data:
+
+networks:
+  dokploy-network:
+    external: true
