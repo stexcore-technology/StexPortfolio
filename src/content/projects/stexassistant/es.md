@@ -55,4 +55,4 @@ En el primer arranque, el servicio de Ollama descarga el modelo indicado en `OLL
 
 ## 📦 Estado
 
-**En desarrollo.** StexAssistant se construye dentro de Stexcore Technology, un equipo basado en Venezuela con clientes internacionales. El dominio documentado es [assistant.stexcore.net](https://assistant.stexcore.net).
+**En desarrollo.** StexAssistant se construye dentro de Stexcore Technology, un equipo basado en Venezuela con clientes internacionales. El dominio documentado es [chat.stexcore.net](https://chat.stexcore.net).

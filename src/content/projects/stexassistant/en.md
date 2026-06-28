@@ -55,4 +55,4 @@ On first boot, the Ollama service downloads the model defined in `OLLAMA_MODEL` 
 
 ## 📦 Status
 
-**In development.** StexAssistant is being built within Stexcore Technology, a team based in Venezuela with international clients. The documented domain is [assistant.stexcore.net](https://assistant.stexcore.net).
+**In development.** StexAssistant is being built within Stexcore Technology, a team based in Venezuela with international clients. The documented domain is [chat.stexcore.net](https://chat.stexcore.net).

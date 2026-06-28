@@ -7,7 +7,7 @@ const meta: IProjectMeta = {
     order: 11,
     image: "/projects/stexassistant.png",
     date: "2026-06-15",
-    url: "https://assistant.stexcore.net",
+    url: "https://chat.stexcore.net",
     tags: ["Next.js", "React", "Ollama", "TailwindCSS", "TypeScript", "Docker"],
     locales: {
         es: {
