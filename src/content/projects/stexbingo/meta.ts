@@ -6,6 +6,7 @@ const meta: IProjectMeta = {
     type: "product",
     featured: false,
     order: 10,
+    image: "/projects/stexbingo.png",
     date: "2026-06-28",
     url: "https://stexbingo.com",
     tags: ["Next.js", "Fastify", "Socket.io", "PostgreSQL", "Drizzle ORM", "Turborepo"],

@@ -6,6 +6,7 @@ const meta: IProjectMeta = {
     type: "product",
     featured: true,
     order: 1,
+    image: "/projects/stexcrm.png",
     date: "2026-06-26",
     url: "https://stexcrm.com",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Drizzle ORM", "Material UI", "Auth.js"],

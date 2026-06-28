@@ -25,6 +25,10 @@ interface IProjectProps {
     repo?: string,
     /** npm package URL. */
     npm?: string,
+    /** Cover image path. */
+    image?: string,
+    /** Localized label for the visit-site button. */
+    visitLabel?: string,
 }
 
 export default component$<IProjectProps>((props) => {
@@ -63,6 +67,9 @@ export default component$<IProjectProps>((props) => {
                 <HeaderProject
                     title={props.title}
                     description={props.description}
+                    image={props.image}
+                    url={props.url}
+                    visitLabel={props.visitLabel}
                 ></HeaderProject>
                 <Divider></Divider>
                 <ContentProject q:slot="bottom">

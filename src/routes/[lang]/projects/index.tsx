@@ -76,6 +76,7 @@ const PageComponent = component$(() => {
                                     details={locale.summary}
                                     date={formatDate(project.date, langType)}
                                     views={visits.value[project.slug] ?? 0}
+                                    image={project.image}
                                 ></CardProject>
                             );
                         })}

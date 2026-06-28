@@ -34,6 +34,8 @@ export interface IProjectMeta {
     featured: boolean;
     /** Manual ordering within its group (lower comes first). */
     order: number;
+    /** Cover image path served from /public (e.g. "/projects/stexcrm.png"). */
+    image: string;
     /** Creation/publish date in ISO format (yyyy-mm-dd). */
     date: string;
     /** Public live URL, when the project is deployed. */

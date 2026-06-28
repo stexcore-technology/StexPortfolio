@@ -29,6 +29,8 @@ export const useProject = routeLoader$(async (event) => {
         url: meta.url,
         repo: meta.repo,
         npm: meta.npm,
+        image: meta.image,
+        visitLabel: lang === "es" ? "Visitar sitio" : "Visit site",
     };
 });
 
@@ -44,6 +46,8 @@ export default component$(() => {
             url={project.value.url}
             repo={project.value.repo}
             npm={project.value.npm}
+            image={project.value.image}
+            visitLabel={project.value.visitLabel}
         ></Project>
     );
 });

@@ -5,6 +5,7 @@ const meta: IProjectMeta = {
     type: "product",
     featured: true,
     order: 2,
+    image: "/projects/stexcore.png",
     date: "2026-06-27",
     url: "https://stexcore.net",
     tags: ["Next.js", "React", "TypeScript", "TailwindCSS", "Framer Motion", "Material UI"],

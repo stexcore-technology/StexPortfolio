@@ -5,6 +5,7 @@ const meta: IProjectMeta = {
     type: "product",
     featured: true,
     order: 3,
+    image: "/projects/stexacademy.png",
     date: "2026-06-26",
     url: "https://academy.stexcore.net",
     tags: ["Next.js", "Material UI", "Drizzle ORM", "PostgreSQL", "Auth.js", "TypeScript"],

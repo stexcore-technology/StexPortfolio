@@ -5,6 +5,7 @@ const meta: IProjectMeta = {
     type: "library",
     featured: false,
     order: 20,
+    image: "/projects/indexed-db.png",
     date: "2024-12-13",
     npm: "https://www.npmjs.com/package/@stexcore/indexed-db",
     repo: "https://github.com/stexcore/indexed-db",

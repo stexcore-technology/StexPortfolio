@@ -10,15 +10,19 @@ interface ICardProjectProps {
     href?: string
     title: string,
     details: string,
-    views: number
+    views: number,
+    image?: string,
 }
 
-export default component$<ICardProjectProps>(({ date, title, details, views, href }) => {
+export default component$<ICardProjectProps>(({ date, title, details, views, href, image }) => {
     // Load styles
     useStylesScoped$(styles);
-    
+
     return (
         <CardButton href={href}>
+            {image && (
+                <img class="thumb" src={image} alt={title} width={600} height={340} loading="lazy" />
+            )}
             <div class="date">
                 {date}
                 <div class="visits">
