@@ -94,3 +94,96 @@
 .content-html li {
   margin-bottom: 5px;
 }
+
+.content-html img {
+  max-width: 100%;
+}
+
+/* Inline code (outside of code blocks) */
+.content-html :not(pre) > code {
+  background-color: #2c313a;
+  color: #e06c75;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.content-html blockquote {
+  margin: 16px 0;
+  padding: 8px 16px;
+  border-left: 4px solid #61afef;
+  background-color: #282c34;
+  color: #abb2bf;
+  border-radius: 0 8px 8px 0;
+}
+
+/* highlight.js — atom-one-dark theme, scoped to project content */
+.content-html .hljs-comment,
+.content-html .hljs-quote {
+  color: #5c6370;
+  font-style: italic;
+}
+
+.content-html .hljs-doctag,
+.content-html .hljs-keyword,
+.content-html .hljs-formula {
+  color: #c678dd;
+}
+
+.content-html .hljs-section,
+.content-html .hljs-name,
+.content-html .hljs-selector-tag,
+.content-html .hljs-deletion,
+.content-html .hljs-subst {
+  color: #e06c75;
+}
+
+.content-html .hljs-literal {
+  color: #56b6c2;
+}
+
+.content-html .hljs-string,
+.content-html .hljs-regexp,
+.content-html .hljs-addition,
+.content-html .hljs-attribute,
+.content-html .hljs-meta .hljs-string {
+  color: #98c379;
+}
+
+.content-html .hljs-attr,
+.content-html .hljs-variable,
+.content-html .hljs-template-variable,
+.content-html .hljs-type,
+.content-html .hljs-selector-class,
+.content-html .hljs-selector-attr,
+.content-html .hljs-selector-pseudo,
+.content-html .hljs-number {
+  color: #d19a66;
+}
+
+.content-html .hljs-symbol,
+.content-html .hljs-bullet,
+.content-html .hljs-link,
+.content-html .hljs-meta,
+.content-html .hljs-selector-id,
+.content-html .hljs-title {
+  color: #61afef;
+}
+
+.content-html .hljs-built_in,
+.content-html .hljs-title.class_,
+.content-html .hljs-class .hljs-title {
+  color: #e6c07b;
+}
+
+.content-html .hljs-emphasis {
+  font-style: italic;
+}
+
+.content-html .hljs-strong {
+  font-weight: bold;
+}
+
+.content-html .hljs-link {
+  text-decoration: underline;
+}

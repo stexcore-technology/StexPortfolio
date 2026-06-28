@@ -12,6 +12,7 @@ import LangButton from "~/components/lang-button/lang-button";
 import Box from "~/components/box/box";
 import langService from "~/services/lang.service";
 import type { ILangType } from "~/types/lang";
+import { EMAIL, GITHUB_URL, PHONE, WHATSAPP_URL } from "~/config/contact";
 
 const PageComponent = component$(() => {
   const lang = useLang(["navbar:home", "contact"]);
@@ -39,25 +40,25 @@ const PageComponent = component$(() => {
                 <div class="content">
                     <CardContact
                         icon={<WhatsappIcon></WhatsappIcon>}
-                        contact="+58 424 2262884"
+                        contact={PHONE}
                         platform={lang.value.contact?.contacts.whatsapp.label || ""}
                         title={lang.value.contact?.contacts.whatsapp.tooltip}
-                        href="https://wa.me/?phone=584242262884&text=Hi+Stexcore!"
+                        href={`${WHATSAPP_URL}?text=Hi+Stexcore!`}
                         target="_blank"
                     ></CardContact>
                     <CardContact
                         icon={<MailIcon></MailIcon>}
-                        contact="dev@stexcore.com"
+                        contact={EMAIL}
                         platform={lang.value.contact?.contacts.email.label || ""}
                         title={lang.value.contact?.contacts.email.tooltip}
-                        href="mailto:dev@stexcore.com"
+                        href={`mailto:${EMAIL}`}
                         ></CardContact>
                     <CardContact
                         icon={<GithubIcon></GithubIcon>}
                         contact="stexcore"
                         platform={lang.value.contact?.contacts.github.label || ""}
                         title={lang.value.contact?.contacts.github.tooltip}
-                        href="https://github.com/stexcore"
+                        href={GITHUB_URL}
                         target="_blank"
                     ></CardContact>
                 </div>

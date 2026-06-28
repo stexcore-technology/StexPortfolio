@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { BackIcon, EyeIcon, GithubIcon, WhatsappIcon } from "~/icons/icons";
+import { BackIcon, EyeIcon, GithubIcon, GlobeIcon, NpmIcon, WhatsappIcon } from "~/icons/icons";
 import ContentProject from "../content-project/content-project";
 import Divider from "../divider/divider";
 import HeaderProject from "../header-project/header-project";
@@ -12,18 +12,25 @@ import { formatViews } from "~/utils/text.util";
 import Box from "../box/box";
 import LangButton from "../lang-button/lang-button";
 import LangProvider from "~/providers/lang.provider";
+import { WHATSAPP_URL } from "~/config/contact";
 
 interface IProjectProps {
     title: string,
     description: string,
     html: string,
-    views: number
+    views: number,
+    /** Public live site URL. */
+    url?: string,
+    /** Source code repository URL. */
+    repo?: string,
+    /** npm package URL. */
+    npm?: string,
 }
 
 export default component$<IProjectProps>((props) => {
     // Load styles
     const navigate = useNavigate();
-    
+
     return (
         <LangProvider segments={[]}>
             <Navbar>
@@ -33,11 +40,21 @@ export default component$<IProjectProps>((props) => {
                 <NavItem title="Views counter for this page" disabled>
                     <EyeIcon></EyeIcon> {formatViews(props.views)}
                 </NavItem>
-                <NavItem href="https://wa.me/?phone=584242262884">
-                    <WhatsappIcon></WhatsappIcon>
-                </NavItem>
-                <NavItem href="https://github.com/stexcore">
+                {props.url && (
+                    <NavItem href={props.url} title="Visit live site">
+                        <GlobeIcon></GlobeIcon>
+                    </NavItem>
+                )}
+                {props.npm && (
+                    <NavItem href={props.npm} title="View on npm">
+                        <NpmIcon></NpmIcon>
+                    </NavItem>
+                )}
+                <NavItem href={props.repo || "https://github.com/stexcore"} title="Source code">
                     <GithubIcon></GithubIcon>
+                </NavItem>
+                <NavItem href={WHATSAPP_URL} title="Contact us on WhatsApp">
+                    <WhatsappIcon></WhatsappIcon>
                 </NavItem>
                 <Box px={10}></Box>
                 <LangButton></LangButton>

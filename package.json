@@ -46,6 +46,9 @@
   },
   "dependencies": {
     "express": "4.20.0",
+    "highlight.js": "^11.11.1",
+    "marked": "^18.0.5",
+    "marked-highlight": "^2.2.4",
     "sequelize": "^6.37.7",
     "sqlite3": "^5.1.7"
   }
