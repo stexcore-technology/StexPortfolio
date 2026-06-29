@@ -99,6 +99,20 @@
     opacity: 0.7;
 }
 
-.item.primary {
-    background-color: rgba(255, 255, 255, 0.06);
+.item.current {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-left: 2px solid var(--text-color-light);
+    cursor: default;
+}
+
+.item.current:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.item.current .name {
+    color: var(--text-color-light);
+}
+
+.item.current .tag {
+    opacity: 0.85;
 }

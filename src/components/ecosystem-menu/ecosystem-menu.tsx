@@ -7,21 +7,23 @@ interface IService {
     name: string;
     tag: { es: string; en: string };
     url: string;
-    primary?: boolean;
+    /** Marks this entry as the current site: shown disabled with a "you're here" label. */
+    current?: boolean;
 }
 
 /** The Stexcore ecosystem — keep in sync as new services launch. */
 const services: IService[] = [
-    { name: "Stexcore", tag: { es: "Agencia · Contratános", en: "Agency · Hire us" }, url: "https://stexcore.net", primary: true },
+    { name: "Stexcore", tag: { es: "Agencia", en: "Agency" }, url: "https://stexcore.net" },
     { name: "StexCRM", tag: { es: "CRM a medida", en: "Custom CRM" }, url: "https://stexcrm.com" },
     { name: "StexAcademy", tag: { es: "Cursos online", en: "Online courses" }, url: "https://academy.stexcore.net" },
     { name: "StexBingo", tag: { es: "Bingo en vivo", en: "Live Bingo" }, url: "https://stexbingo.com" },
     { name: "StexAssistant", tag: { es: "Chat de IA", en: "AI chat" }, url: "https://chat.stexcore.net" },
+    { name: "Portafolio", tag: { es: "Portafolio", en: "Portfolio" }, url: "https://portfolio.stexcore.net", current: true },
 ];
 
 const LABELS = {
-    es: { title: "Ecosistema Stexcore", subtitle: "Explorá los otros servicios" },
-    en: { title: "Stexcore ecosystem", subtitle: "Explore our other services" },
+    es: { title: "Ecosistema Stexcore", subtitle: "Explorá los otros servicios", here: "Estás aquí" },
+    en: { title: "Stexcore ecosystem", subtitle: "Explore our other services", here: "You're here" },
 };
 
 /**
@@ -65,16 +67,23 @@ export default component$(() => {
                     <span>{t.subtitle}</span>
                 </div>
                 {services.map((s) => (
-                    <a
-                        key={s.url}
-                        class={["item", { primary: s.primary }]}
-                        href={s.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <span class="name">{s.name}</span>
-                        <span class="tag">{s.tag[lt]}</span>
-                    </a>
+                    s.current ? (
+                        <div key={s.url} class="item current" aria-current="page">
+                            <span class="name">{s.name}</span>
+                            <span class="tag">{t.here}</span>
+                        </div>
+                    ) : (
+                        <a
+                            key={s.url}
+                            class="item"
+                            href={s.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span class="name">{s.name}</span>
+                            <span class="tag">{s.tag[lt]}</span>
+                        </a>
+                    )
                 ))}
             </div>
         </li>
